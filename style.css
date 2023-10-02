@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #fee9e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.background {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.foreground {
+    width: 100vw;
+    height: 25vh;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('/foreground.png');
+    background-size: contain;
+    animation: slide 120s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    from {
+        background-position-x: 0%;
+    }
+    to {
+        background-position-x: 100%;
+    }
+}
